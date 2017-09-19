@@ -1,4 +1,5 @@
-final int CIRCLE_SPEED = 7;
+// This line gives the value of the speed at which the circle will move in the sketch. It is an integer of 7
+final int CIRCLE_SPEED = 7; 
 final color NO_CLICK_FILL_COLOR = color(250, 100, 100);
 final color CLICK_FILL_COLOR = color(100, 100, 250);
 final color BACKGROUND_COLOR = color(250, 150, 150);
@@ -38,7 +39,7 @@ void draw() {
     circleVY = -circleVY;
   }
 }
-
+// This means that when the mouse is pressed, the background color is prompted and covers the drawings mades by the circle, giving the impression that it has been reinitialized
 void mousePressed() {
   background(BACKGROUND_COLOR);
 }
