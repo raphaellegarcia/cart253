@@ -110,8 +110,7 @@ void drawBall() {
      fill(ballColor);
      rect(ballX, ballY, ballSize, ballSize);
  }
-   
-     
+  
 
 }
 
