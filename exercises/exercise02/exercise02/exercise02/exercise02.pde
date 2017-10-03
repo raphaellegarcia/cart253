@@ -142,7 +142,7 @@ void handleBallOffBottom() {
   }
 }
 
-// this is a loop that says, if the ball hits the bottom, it should go back to he initial launch position
+// this is a loop that says, if the ball hits the bottom, it should go back to the initial launch position
 boolean ballOffBottom() {
   return (ballY - ballSize/2 > height);
 }
@@ -154,12 +154,12 @@ void handleBallHitWall() {
     ballVX = -ballVX;
   } else if (ballX + ballSize/2 > width) {
     ballX = width - ballSize/2;
-    ballVX = -ballVX;
+    ballVX = -ballVX + 1; // CHANGED: speed of the ball goes faster by +1 on the X axis everytime it touches the wall
   }
   
   if (ballY - ballSize/2 < 0) {
     ballY = 0 + ballSize/2;
-    ballVY = -ballVY;
+    ballVY = -ballVY + 1; // CHANGED: speed of the ball goes faster by +1 on the Y axis everytime it touches the wall
   }
 }
 
