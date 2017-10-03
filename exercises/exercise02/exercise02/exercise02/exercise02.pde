@@ -25,12 +25,14 @@ int ballSpeed = 5;
 int ballSize = 16;
 color ballColor = color(255);
 
+
 //This sets up the size of the window's background, the always-already presence of the paddle and ball
 void setup() {
   size(640, 480);
   
   setupPaddle();
   setupBall();
+ 
 }
 
 // These lines declare the initial position of the paddle on screen, in the middle of the screen on the x axis, and away from the bottom vertically in the distance on the paddle's thickness, as well as a velocity of 0 pixels on the x axis
@@ -72,7 +74,7 @@ void drawStatic() {
   }
 }
 
-//these lines set the boundaries of the paddle: the speed and constraints in which the paddle can navigate. So within the borders of the window on the x axis and at moving speed of +1 pixel depending on its speed.
+//these lines set the boundaries of the paddle: the speed and constraints in which the paddle can navigate. So within the borders of the window on the x axis and at moving speed at every frame
 void updatePaddle() {
   paddleX += paddleVX;  
   paddleX = constrain(paddleX,0+paddleWidth/2,width-paddleWidth/2);
