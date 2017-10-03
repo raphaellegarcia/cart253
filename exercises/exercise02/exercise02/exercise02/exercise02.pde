@@ -22,7 +22,7 @@ int ballY;
 int ballVX;
 int ballVY;
 int ballSpeed = 5;
-int ballSize = 16;
+int ballSize = 10;
 color ballColor = color(255);
 
 
@@ -102,8 +102,17 @@ void drawPaddle() {
 void drawBall() {
   rectMode(CENTER);
   noStroke();
-  fill(ballColor);
-  rect(ballX, ballY, ballSize, ballSize);
+  
+  //ADDED: a cloud of squares will be always around the ball, within 150 pixels of distance from the ball
+   for (int i = 0; i < 100; i++) {
+      fill(random(255),random(255),random(255)); //CHANGED: the squares around the ball all have a different colour
+      rect(ballX + random(-150,150), ballY + random(-150,150), ballSize, ballSize); 
+     fill(ballColor);
+     rect(ballX, ballY, ballSize, ballSize);
+ }
+   
+     
+
 }
 
 // this defines what happens when the ball hits the paddle: it changes direction on the Y axis to minus the direction it was going at, when the position of the ball touches the edge of the paddle mathematically declared here
@@ -130,6 +139,7 @@ void handleBallOffBottom() {
   if (ballOffBottom()) {
     ballX = width/2;
     ballY = height/2;
+    ballSize += 5;
   }
 }
 
