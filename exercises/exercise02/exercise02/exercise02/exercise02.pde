@@ -109,6 +109,7 @@ void handleBallHitPaddle() {
   if (ballOverlapsPaddle()) {
     ballY = paddleY - paddleHeight/2 - ballSize/2;
     ballVY = -ballVY;
+    staticColor = color(random(255),random(255),random(255)); //CHANGED: changes color of the static whenever the ball touches the paddle
   }
 }
 
