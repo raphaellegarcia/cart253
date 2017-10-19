@@ -9,7 +9,7 @@ class Ball {
 
   // Default values for speed and size
   int SPEED = 5;
-  int SIZE = 16;
+  int SIZE = 40;
 
   // The location of the ball
   int x;
@@ -20,7 +20,8 @@ class Ball {
   int vy;
 
   // The colour of the ball
-  color ballColor = color(255);
+  //CHANGED TO LEMON YELLOW
+  color ballColor = color(255,250,0);
 
 
   /////////////// Constructor ///////////////
@@ -132,11 +133,14 @@ class Ball {
 
   void display() {
     // Set up the appearance of the ball (no stroke, a fill, and rectMode as CENTER)
-    noStroke();
+    //ADDED COLORED STROKE TO MAKE IT LOOK LIKE A LEMON SLICE
+   
+    stroke(255,216,0);
+    strokeWeight(5);
     fill(ballColor);
-    rectMode(CENTER);
+    ellipseMode(CENTER);
 
     // Draw the ball
-    rect(x, y, SIZE, SIZE);
+    ellipse(x, y, SIZE, SIZE);
   }
 }
