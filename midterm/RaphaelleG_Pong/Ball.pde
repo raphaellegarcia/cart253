@@ -82,7 +82,6 @@ class Ball {
     
     if (scoreL == winScore || scoreR == winScore){
      
-     
     }
   }
   

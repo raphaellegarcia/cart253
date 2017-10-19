@@ -49,7 +49,7 @@ void setup() {
   textFont(font);
   
   //declares the file for the background
-  bg = loadImage("bluebackground.png");
+  bg = loadImage("scared.png");
   // Create the paddles on either side of the screen. 
   // Use PADDLE_INSET to to position them on x, position them both at centre on y
   // Also pass through the two keys used to control 'up' and 'down' respectively

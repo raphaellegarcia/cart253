@@ -19,7 +19,7 @@ class Paddle {
   int vy;
   
   // The fill color of the paddle
-  color paddleColor = color(255);
+  color paddleColor = color(255,216,0);
   
   PImage knife; 
 
@@ -58,6 +58,10 @@ class Paddle {
     // Update position with velocity (to move the paddle)
     x += vx;
     y += vy;
+   
+    y += random(-9, 9);
+
+
 
     // Constrain the paddle's y position to be in the window
     y = constrain(y,0 + HEIGHT/2,height - HEIGHT/2);
