@@ -25,7 +25,7 @@ color backgroundColor = color(0);
 
 int scoreL = 0;
 int scoreR = 0;
-int winScore = 3;
+int winScore = 13;
 int speedX = 5;
 int speedY = 5;
 
