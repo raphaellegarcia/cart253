@@ -23,6 +23,7 @@ int PADDLE_INSET = 8;
 // The background colour during play (black)
 color backgroundColor = color(0);
 
+//declare the initial score values for players left and right, and the number of points to win the game
 int scoreL = 0;
 int scoreR = 0;
 int winScore = 13;
@@ -110,6 +111,8 @@ void scores() {
   text(scoreL, width-100,50);
 }
 
+//declares the conditions of the game over state (inspired by Tanay Singhal
+//https://www.youtube.com/watch?v=Xdeih9syh4I
 void gameOver(){
  if(scoreL == winScore) {
   
