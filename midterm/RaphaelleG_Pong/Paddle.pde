@@ -59,6 +59,7 @@ class Paddle {
     x += vx;
     y += vy;
    
+   //shakes randomly vertically between 9 and -9
     y += random(-9, 9);
 
 
