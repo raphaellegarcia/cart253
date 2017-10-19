@@ -46,7 +46,7 @@ void setup() {
   textAlign(CENTER,CENTER);
   font = loadFont("Faster.vlw");
   textFont(font);
- 
+  
   bg = loadImage("bluebackground.png");
   // Create the paddles on either side of the screen. 
   // Use PADDLE_INSET to to position them on x, position them both at centre on y
@@ -101,7 +101,7 @@ void draw() {
 
 
 void scores() {
-  fill(255);
+  fill(255,216,0);
   text(scoreR,100,50);
   text(scoreL, width-100,50);
 }
