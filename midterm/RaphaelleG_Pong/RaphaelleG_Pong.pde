@@ -25,12 +25,12 @@ color backgroundColor = color(0);
 
 int scoreL = 0;
 int scoreR = 0;
-int winScore = 10;
+int winScore = 3;
 int speedX = 5;
 int speedY = 5;
 
+//Declares the new image for the background and the new font
 PImage bg;
-
 PFont font;
 
 
@@ -42,11 +42,13 @@ void setup() {
   // Set the size: CHANGED TO 1920 x 1080
   size(1920, 1080);
   
+  //Declares the size, alignment, loads the fon in the data folder
   textSize(40);
   textAlign(CENTER,CENTER);
   font = loadFont("Faster.vlw");
   textFont(font);
   
+  //declares the file for the background
   bg = loadImage("bluebackground.png");
   // Create the paddles on either side of the screen. 
   // Use PADDLE_INSET to to position them on x, position them both at centre on y
@@ -99,7 +101,7 @@ void draw() {
 // so when the keypress is detected in the main program we need to
 // tell the paddles
 
-
+//declares the position of the scores and color
 void scores() {
   fill(255,216,0);
   text(scoreR,100,50);
@@ -108,30 +110,29 @@ void scores() {
 
 void gameOver(){
  if(scoreL == winScore) {
-   gameOverPage("Left wins!", 255);
+   text("Left wins!", CENTER, CENTER);
+   text("Click to play again", CENTER,CENTER - 50);
    speedX = 0;
    speedY = 0;
    scoreL = 0;
    scoreR = 0;
  }
   if(scoreR == winScore) {
-   gameOverPage("Right wins!", 255);
+  text("Right wins!", CENTER, CENTER);
+   text("Click to play again", CENTER,CENTER - 50);
    speedX = 0;
    speedY = 0;
    scoreL = 0;
    scoreR = 0;
  }
-}
-
-void gameOverPage(String text, color c) {
-  text("Game Over", width/2, height/2);
-  
-  if(mousePressed) {
+ if(mousePressed) {
    scoreR = 0;
    scoreL = 0;
-   
-  }
+   speedX = 5;
+   speedY = 5;
+ }
 }
+
 
 void keyPressed() {
   // Just call both paddles' own keyPressed methods
@@ -147,4 +148,8 @@ void keyReleased() {
   // Call both paddles' keyReleased methods
   leftPaddle.keyReleased();
   rightPaddle.keyReleased();
+}
+
+void mousePressed(){
+ 
 }

@@ -60,8 +60,11 @@ class Ball {
   void update() {
     // First update the location based on the velocity (so the ball moves)
     //CHANGED made the ball go faster vertically at every frame, it makes it bounce like a basket ball almost
-    x += vx+1;
-    y += vy+1;
+    x += vx;
+    y += vy;
+    //This makes the ball jitter from 9 pixels of difference on x and y axis. Inspired by the code of Tickle in https://processing.org/examples/tickle.html
+    x += random(-9, 9);
+    y += random(-9, 9);
 
     // Check if the ball is going off the top of bottom
     if (y - SIZE/2 < 0 || y + SIZE/2 > height) {
@@ -78,7 +81,7 @@ class Ball {
     }
     
     if (scoreL == winScore || scoreR == winScore){
-     SPEED = 0; 
+     
      
     }
   }
@@ -91,6 +94,9 @@ class Ball {
   void reset() {
     x = width/2;
     y = height/2;
+    x += vx+1;
+    y += vy+1;
+    
   }
   
   // isOffScreen()
