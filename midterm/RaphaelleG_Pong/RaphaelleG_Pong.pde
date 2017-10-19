@@ -42,6 +42,7 @@ void setup() {
   // Set the size: CHANGED TO 1920 x 1080
   size(1920, 1080);
   
+  
   //Declares the size, alignment, loads the fon in the data folder
   textSize(40);
   textAlign(CENTER,CENTER);
@@ -88,6 +89,7 @@ void draw() {
     // If it has, reset the ball
     ball.reset();
   }
+  
 
   // Display the paddles and the ball
   leftPaddle.display();
@@ -110,6 +112,7 @@ void scores() {
 
 void gameOver(){
  if(scoreL == winScore) {
+  
    text("Left wins!", CENTER, CENTER);
    text("Click to play again", CENTER,CENTER - 50);
    speedX = 0;
@@ -118,6 +121,7 @@ void gameOver(){
    scoreR = 0;
  }
   if(scoreR == winScore) {
+    
   text("Right wins!", CENTER, CENTER);
    text("Click to play again", CENTER,CENTER - 50);
    speedX = 0;

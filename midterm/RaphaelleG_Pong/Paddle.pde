@@ -72,10 +72,6 @@ class Paddle {
   //
   // Display the paddle at its location
   
-  void setup(){
-   knife = loadImage("knife.png"); 
-    
-  }
   
   void display() {
     // Set display properties
