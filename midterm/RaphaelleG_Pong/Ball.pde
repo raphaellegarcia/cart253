@@ -23,6 +23,7 @@ class Ball {
   //CHANGED TO LEMON YELLOW
   color ballColor = color(255,250,0);
 
+  PImage Lemon;
 
   /////////////// Constructor ///////////////
 
@@ -51,10 +52,16 @@ class Ball {
   // and also checks whether it should bounce of the top or bottom of the screen
   // and whether the ball has gone off the screen on either side.
 
+  void setup(){
+  Lemon = loadImage("Lemon.png");
+}
+
+
   void update() {
     // First update the location based on the velocity (so the ball moves)
+    //CHANGED made the ball go faster vertically at every frame, it makes it bounce like a basket ball almost
     x += vx;
-    y += vy;
+    y += vy++;
 
     // Check if the ball is going off the top of bottom
     if (y - SIZE/2 < 0 || y + SIZE/2 > height) {
