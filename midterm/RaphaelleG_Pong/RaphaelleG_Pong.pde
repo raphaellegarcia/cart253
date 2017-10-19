@@ -109,6 +109,8 @@ void scores() {
   fill(255,216,0);
   text(scoreR,100,50);
   text(scoreL, width-100,50);
+  
+ 
 }
 
 //declares the conditions of the game over state (inspired by Tanay Singhal
