@@ -29,6 +29,9 @@ int winScore = 10;
 int speedX = 5;
 int speedY = 5;
 
+PImage bg;
+
+
 // setup()
 //
 // Sets the size and creates the paddles and ball
@@ -38,6 +41,7 @@ void setup() {
   size(1920, 1080);
   textSize(40);
   textAlign(CENTER,CENTER);
+  bg = loadImage("bluebackground.png");
 
   // Create the paddles on either side of the screen. 
   // Use PADDLE_INSET to to position them on x, position them both at centre on y
@@ -58,7 +62,7 @@ void setup() {
 
 void draw() {
   // Fill the background each frame so we have animation
-  background(backgroundColor);
+  background(bg);
   scores();
   gameOver();
 
