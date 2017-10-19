@@ -34,7 +34,7 @@ int speedY = 5;
 // Sets the size and creates the paddles and ball
 
 void setup() {
-  // Set the size
+  // Set the size: CHANGED TO 1920 x 1080
   size(1920, 1080);
   textSize(40);
   textAlign(CENTER,CENTER);
