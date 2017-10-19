@@ -43,7 +43,6 @@ void setup() {
   // Set the size: CHANGED TO 1920 x 1080
   size(1920, 1080);
   
-  
   //Declares the size, alignment, loads the fon in the data folder
   textSize(40);
   textAlign(CENTER,CENTER);
@@ -75,7 +74,6 @@ void draw() {
   scores();
   gameOver();
  
-
   // Update the paddles and ball by calling their update methods
   leftPaddle.update();
   rightPaddle.update();
@@ -91,7 +89,6 @@ void draw() {
     ball.reset();
   }
   
-
   // Display the paddles and the ball
   leftPaddle.display();
   rightPaddle.display();
@@ -109,8 +106,6 @@ void scores() {
   fill(255,216,0);
   text(scoreR,100,50);
   text(scoreL, width-100,50);
-  
- 
 }
 
 //declares the conditions of the game over state (inspired by Tanay Singhal
@@ -125,6 +120,7 @@ void gameOver(){
    scoreL = 0;
    scoreR = 0;
  }
+ 
   if(scoreR == winScore) {
     
   text("Right wins!", CENTER, CENTER);
@@ -134,6 +130,7 @@ void gameOver(){
    scoreL = 0;
    scoreR = 0;
  }
+ 
  if(mousePressed) {
    scoreR = 0;
    scoreL = 0;
@@ -141,7 +138,6 @@ void gameOver(){
    speedY = 5;
  }
 }
-
 
 void keyPressed() {
   // Just call both paddles' own keyPressed methods
@@ -157,8 +153,4 @@ void keyReleased() {
   // Call both paddles' keyReleased methods
   leftPaddle.keyReleased();
   rightPaddle.keyReleased();
-}
-
-void mousePressed(){
- 
 }

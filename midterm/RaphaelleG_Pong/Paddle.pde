@@ -26,7 +26,6 @@ class Paddle {
   // The characters used to make the paddle move up and down, defined in constructor
   char upKey;
   char downKey;
- 
 
 
   /////////////// Constructor ///////////////
@@ -47,7 +46,6 @@ class Paddle {
    
   }
 
-
   /////////////// Methods ///////////////
 
   // update()
@@ -61,7 +59,6 @@ class Paddle {
    
    //shakes randomly vertically between 9 and -9
     y += random(-9, 9);
-
 
 
     // Constrain the paddle's y position to be in the window

@@ -148,6 +148,6 @@ class Ball {
     ellipseMode(CENTER);
 
     // Draw the ball
-    ellipse(x, y, SIZE + random(-30,30), SIZE+ random(-30,30));
+    ellipse(x, y, SIZE + random(-15,15), SIZE+ random(-15,15));
   }
 }
