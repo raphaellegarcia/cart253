@@ -8,7 +8,7 @@ class Paddle {
   /////////////// Properties ///////////////
 
   // Default values for speed and size
-  int SPEED = 7;
+  int SPEED = 25;
   int HEIGHT = 100;
   int WIDTH = 16;
 
@@ -20,6 +20,8 @@ class Paddle {
   
   // The fill color of the paddle
   color paddleColor = color(255);
+  
+  PImage knife; 
 
   // The characters used to make the paddle move up and down, defined in constructor
   char upKey;
@@ -64,6 +66,11 @@ class Paddle {
   // display()
   //
   // Display the paddle at its location
+  
+  void setup(){
+   knife = loadImage("knife.png"); 
+    
+  }
   
   void display() {
     // Set display properties

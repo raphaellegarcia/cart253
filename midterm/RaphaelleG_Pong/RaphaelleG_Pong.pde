@@ -31,6 +31,8 @@ int speedY = 5;
 
 PImage bg;
 
+PFont font;
+
 
 // setup()
 //
@@ -39,10 +41,13 @@ PImage bg;
 void setup() {
   // Set the size: CHANGED TO 1920 x 1080
   size(1920, 1080);
+  
   textSize(40);
   textAlign(CENTER,CENTER);
+  font = loadFont("Faster.vlw");
+  textFont(font);
+ 
   bg = loadImage("bluebackground.png");
-
   // Create the paddles on either side of the screen. 
   // Use PADDLE_INSET to to position them on x, position them both at centre on y
   // Also pass through the two keys used to control 'up' and 'down' respectively
@@ -65,6 +70,7 @@ void draw() {
   background(bg);
   scores();
   gameOver();
+ 
 
   // Update the paddles and ball by calling their update methods
   leftPaddle.update();
