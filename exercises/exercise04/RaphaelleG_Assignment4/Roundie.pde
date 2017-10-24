@@ -101,5 +101,5 @@ class Roundie {
     fill(fill, energy); 
     noStroke();
     ellipse(x, y, size, size);
-    
+  }
   }

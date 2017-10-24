@@ -27,13 +27,11 @@ void setup() {
     int x = floor(random(0, width/gridSize));
     int y = floor(random(0, height/gridSize));
     griddies[i] = new Griddie(x * gridSize, y * gridSize, gridSize);
-    roundies[i] = new Roundie(x * gridSize, y * gridSize, gridSize);
   }
-  
+
   for (int i = 0; i < roundies.length; i++) {
     int x = floor(random(0, width/gridSize));
     int y = floor(random(0, height/gridSize));
-    griddies[i] = new Griddie(x * gridSize, y * gridSize, gridSize);
     roundies[i] = new Roundie(x * gridSize, y * gridSize, gridSize);
   }
 }
@@ -58,28 +56,32 @@ void draw() {
       // It means if J is NOT equal to i
       if (j != i) {
         // QUESTION: What does this line check?
-       //This line checks when a griddie overlaps another griddie
+        //This line checks when a griddie overlaps another griddie
         griddies[i].collide(griddies[j]);
       }
       
-      for (int i = 0; i < roundies.length; i++) {
 
-    // Update the griddies
-    roundies[i].update();
 
-    // Now go through all the griddies a second time...
-    for (int j = 0; j < roundies.length; j++) {
-      // QUESTION: What is this if-statement for?
-      // It means if J is NOT equal to i
-      if (j != i) {
-        // QUESTION: What does this line check?
-       //This line checks when a griddie overlaps another griddie
-        roundies[i].collide(griddies[j]);
+        // Display the griddies
+        griddies[i].display();
+        roundies[i].display();
       }
     }
     
-    // Display the griddies
-    griddies[i].display();
-    roundies[i].display();
+         for (int i = 0; i < roundies.length; i++) {
+
+        // Update the griddies
+        roundies[i].update();
+
+        // Now go through all the griddies a second time...
+        for (int j = 0; j < roundies.length; j++) {
+          // QUESTION: What is this if-statement for?
+          // It means if J is NOT equal to i
+          if (j != i) {
+            // QUESTION: What does this line check?
+            //This line checks when a griddie overlaps another griddie
+            roundies[i].collide(roundies[j]);
+          }
+        }
   }
 }
