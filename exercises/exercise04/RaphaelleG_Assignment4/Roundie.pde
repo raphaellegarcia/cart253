@@ -75,7 +75,7 @@ class Roundie {
   // Checks for collision with the other Griddie
   // and updates energy level
   
-  void collide(Griddie other) {
+  void collide(Roundie other) {
     // QUESTION: What is this if-statement for?
     //This means that when a griddie with energy of 0 overlaps another griddie, no energy is transferred, it dies and disappears thank to the return function
     if (energy == 0 || other.energy == 0) {
@@ -101,4 +101,5 @@ class Roundie {
     fill(fill, energy); 
     noStroke();
     ellipse(x, y, size, size);
+    
   }
