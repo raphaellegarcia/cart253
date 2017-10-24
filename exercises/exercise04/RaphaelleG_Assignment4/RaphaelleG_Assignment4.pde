@@ -21,6 +21,7 @@ void setup() {
   frameRate(10);
 
   // QUESTION: What does this for loop do?
+  //This loop sets up the random position of each square within the grid
   for (int i = 0; i < griddies.length; i++) {
     int x = floor(random(0, width/gridSize));
     int y = floor(random(0, height/gridSize));
@@ -44,8 +45,10 @@ void draw() {
     // Now go through all the griddies a second time...
     for (int j = 0; j < griddies.length; j++) {
       // QUESTION: What is this if-statement for?
+      // It means if J is NOT equal to i
       if (j != i) {
         // QUESTION: What does this line check?
+       //This line checks when a griddie overlaps another griddie
         griddies[i].collide(griddies[j]);
       }
     }
