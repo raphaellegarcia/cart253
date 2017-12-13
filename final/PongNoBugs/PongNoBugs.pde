@@ -10,11 +10,11 @@ PFont font;
 int PADDLE_INSET = 32;
 int scoreL = 0;
 int scoreR = 0;
-int winScore = 2;
+int winScore = 6;
 
 color backgroundColor = color(0);
-color player1Shade = color(0);
-color player2Shade = color(0);
+color player1Shade = color(0,0,0,0);
+color player2Shade = color(0,0,0,0);
 
 
 String gameState;

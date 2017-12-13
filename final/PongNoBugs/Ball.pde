@@ -40,27 +40,7 @@ class Ball {
     vx = SPEED;
     vy = SPEED;
     image = loadImage("Desktop/PongNoBugs/data/images/shadeball.png");
- //   p0 = loadImage("Desktop/PongNoBugs/data/images/0.png");
-//    p1 = loadImage("Desktop/PongNoBugs/data/images/1.png");
-//    p2 = loadImage("Desktop/PongNoBugs/data/images/2.png");
-//    p3 = loadImage("Desktop/PongNoBugs/data/images/3.png");
-//    p4 = loadImage("Desktop/PongNoBugs/data/images/4.png");
-//    p5 = loadImage("Desktop/PongNoBugs/data/images/5.png");
-  //  p6 = loadImage("Desktop/PongNoBugs/data/images/6.png");
-//    p7 = loadImage("Desktop/PongNoBugs/data/images/7.png");
-//    p8 = loadImage("Desktop/PongNoBugs/data/images/8.png");
-//    p9 = loadImage("Desktop/PongNoBugs/data/images/9.png");
-//    picArray[0] = p0;
-//    picArray[1] = p1;
-//    picArray[2] = p2;
-//    picArray[3] = p3;
-//    picArray[4] = p4;
-//    picArray[5] = p5;
- //   picArray[6] = p6;
-//    picArray[7] = p7;
-//    picArray[8] = p8;
-//    picArray[9] = p9;
-
+    
 for (int i = 0; i < picArray.length; i++) {
 picArray[i]= loadImage("Desktop/PongNoBugs/data/images/" +i+ ".png");
 }
