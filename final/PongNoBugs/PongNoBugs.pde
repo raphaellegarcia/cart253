@@ -45,22 +45,26 @@ void setup() {
   font = loadFont("8bit.vlw");
   textFont(font);
 
-//
+//declares the first game state
   gameState = "START";
 
+//creates the paddles, defines the inset, position, image and the keys to move the paddles
   leftPaddle = new Paddle(PADDLE_INSET, height/2, "images/drag1.png", '1', 'q');
   rightPaddle = new Paddle(width - PADDLE_INSET, height/2, "images/drag2.png", '0', 'p');
   
+// creates the ball and its initial position  
   ball = new Ball(width/2, height/2);
-  
-  backgroundImage = loadImage("Desktop/PongNoBugs/data/images/BOARD.png");
-  
+
+//loads the background image  
+  backgroundImage = loadImage("images/BOARD.png");
+
+//loads the background song  
   path = sketchPath("themesong.mp3");
   file = new SoundFile(this, path);
   file.loop();
 }
 
-
+//draws continuously the game states deoending on which one is supposed to appear 
 void draw() {
 
   if (gameState == "START") {
@@ -70,21 +74,11 @@ void draw() {
   } else if (gameState == "WIN") {
     winGame();
   } 
-//  else if (gameState == "LOSE") {
-//    loseGame();
-//  }
+  else if (gameState == "LOSE") {
+    loseGame();
+  }
 }
 
-// void startGame() {
-//   textAlign(CENTER);
-//   textSize(18);
-//   fill(255,0,0);
-//   text("Click Anywhere to Play!", width/2, height/2);
-
-//   if (mousePressed==true){
-//     gameState = "PLAY";
-//   }
-// }
 
 void scores() {
   fill (255);
@@ -96,7 +90,6 @@ void scores() {
 void startGame() {
    ruStart = loadImage("images/ruStart.png");
   background(ruStart); 
-//  text("click anywhere to start", width/2-500, height/2);
 }
 
 void playGame() {
@@ -122,20 +115,10 @@ void playGame() {
   
   if(scoreL == winScore) {
     gameState = "WIN";
-//   background(100,100,100);
-//   fill(255);
-//   text("Sashay Away! You just got R-E-A-D Honey!", width/4,height/2);
-//   text("Want some more? Click anywhere to start again!", width/4-100,height/2 + 150);  
  }
  
   if(scoreR == winScore) {
-    loseGame();
- //   gameState = "LOSE";
-//   background(100,100,100);
-//   fill(255);
-//   text("SLAYYYY!! YAS QUEEN!", width/4,height/2);
-//   text("Want some more? Click anywhere to start again!", width/4-100,height/2 + 150);
-   
+    gameState = "LOSE";
  }
 }
 
