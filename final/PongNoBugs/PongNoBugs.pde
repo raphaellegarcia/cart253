@@ -16,6 +16,7 @@ color backgroundColor = color(0);
 color player1Shade = color(0);
 color player2Shade = color(0);
 
+
 String gameState;
 
 import processing.sound.*;
@@ -97,21 +98,11 @@ void playGame() {
   rightPaddle.display();
   ball.display();
   
-  color(0,player1Shade);
+  fill(player1Shade);
   rect(0,0,width-720,1080);
   
-  color(0,player2Shade);
+  fill(player2Shade);
   rect(720,0,720,1080);
-
-  
-//  fill(255,255,255,0);
-//  noStroke();
-//  rect(0,0,720,1080);
-//  fill(255,255,255,0);
-//  noStroke();
-//  rect(width-720,0,720,1080);
-  
-  
   
   
   if(scoreL == winScore) {
