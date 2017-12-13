@@ -18,6 +18,8 @@ class Ball {
   PImage image;
   PImage p0,p1,p2,p3,p4,p5,p6,p7,p8,p9;
   PImage [] picArray = new PImage [10];
+  
+  int quotePointer;
 
 
   /////////////// Constructor ///////////////
@@ -78,6 +80,7 @@ class Ball {
     if (y - image.width/2 < 0 || y + image.width/2 > height) {
       // If it is, then make it "bounce" by reversing its velocity
       vy = -vy;
+     
  
       }
       if (x > width ) {
@@ -137,7 +140,7 @@ class Ball {
       }
       // And make it bounce
       vx = -vx;
-      image(picArray[int(random(picArray.length))],x,y,image.width,image.width);
+      quotePointer++;
     }
   }
 
@@ -147,6 +150,6 @@ class Ball {
 
   void display() {
    imageMode(CENTER);
-   image(picArray[int(random(picArray.length))],x,y,image.width,image.width);
+   image(picArray[quotePointer%10], x,  y, image.width, image.width);
   }
 }
