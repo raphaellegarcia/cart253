@@ -13,8 +13,8 @@ int scoreR = 0;
 int winScore = 2;
 
 color backgroundColor = color(0);
-color player1Shade = color(0,0);
-color player2Shade = color(0,0);
+color player1Shade = color(0);
+color player2Shade = color(0);
 
 String gameState;
 
@@ -74,6 +74,8 @@ void scores() {
   fill (255);
   text(scoreL, 100, 50);
   text(scoreR, width-100, 50);
+  
+  
 }
 
 void startGame() {
@@ -95,9 +97,10 @@ void playGame() {
   rightPaddle.display();
   ball.display();
   
-  fill(player1Shade,0);
+  color(0,player1Shade);
   rect(0,0,width-720,1080);
-  fill(player2Shade,0);
+  
+  color(0,player2Shade);
   rect(720,0,720,1080);
 
   
@@ -108,13 +111,8 @@ void playGame() {
 //  noStroke();
 //  rect(width-720,0,720,1080);
   
-  if(scoreL =+ 1 || scoreL < winScore) {
-    player1Shade +=10;
-    }
   
-   if(scoreR =+ 1|| scoreR < winScore) {
-    player2Shade +=10;
-    }
+  
   
   if(scoreL == winScore) {
    background(100,100,100);
