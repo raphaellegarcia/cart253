@@ -74,14 +74,13 @@ void draw() {
 
 void scores() {
   fill (255);
+  textSize(10);
   text(scoreL, 100, 50);
-  text(scoreR, width-100, 50);
-  
-  
+  text(scoreR, width-100, 50); 
 }
 
 void startGame() {
-  background(backgroundImage); 
+//  background(backgroundImage); 
   text("click anywhere to start", width/2-500, height/2);
 }
 
