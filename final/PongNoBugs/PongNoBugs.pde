@@ -115,10 +115,12 @@ void playGame() {
  }
  
   if(scoreR == winScore) {
-   background(100,100,100);
-   fill(255);
-   text("SLAYYYY!! YAS QUEEN!", width/4,height/2);
-   text("Want some more? Click anywhere to start again!", width/4-100,height/2 + 150);
+    loseGame();
+ //   gameState = "LOSE";
+//   background(100,100,100);
+//   fill(255);
+//   text("SLAYYYY!! YAS QUEEN!", width/4,height/2);
+//   text("Want some more? Click anywhere to start again!", width/4-100,height/2 + 150);
    
  }
 }
@@ -129,22 +131,32 @@ void winGame() {
    fill(255);
    text("Sashay Away! \n You just got R-E-A-D Honey!", width/4,height/2);
    text("Want some more? \n Click anywhere to start again!", width/4-100,height/2 + 150);
-   
-  if(mousePressed==true) {
-    gameState = "START";
+   fill(200);
+   rect(350,380,100,60);
+  if(mousePressed==true && mouseX > 350 && mouseX < 450 && mouseY > 380 && mouseY < 440) {
+    resetGame();
   } 
 }
 
-//void loseGame() {
-//   if(mousePressed==true) {
-//    gameState = "START";
-//  }
-//}
+void loseGame() {
+  background(200,100,10);
+   fill(255);
+   text("SLAYYYY!! YAS QUEEN!", width/4,height/2);
+   text("Want some more? Click anywhere to start again!", width/4-100,height/2 + 150);
+   fill(200);
+   rect(350,380,100,60);
+   
+   if(mousePressed==true && mouseX > 350 && mouseX < 450 && mouseY > 380 && mouseY < 440) {
+    resetGame();
+  }
+}
 
 void resetGame() {
-     if(mousePressed==true) {
     gameState = "START";
-  }
+    scoreL = 0;
+    scoreR = 0;
+    player1Shade = 0;
+    player2Shade = 0;
 }
 
 void clearBackground() {
