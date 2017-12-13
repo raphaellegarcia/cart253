@@ -1,9 +1,6 @@
-
 Paddle leftPaddle;
 Paddle rightPaddle;
 Ball ball;
-Rectangle rectangleLeft;
-Rectangle rectangleRight;
 
 
 PImage backgroundImage;
@@ -16,6 +13,8 @@ int scoreR = 0;
 int winScore = 2;
 
 color backgroundColor = color(0);
+color player1Shade = color(0,0);
+color player2Shade = color(0,0);
 
 String gameState;
 
@@ -36,11 +35,11 @@ void setup() {
 
   leftPaddle = new Paddle(PADDLE_INSET, height/2, "images/drag1.png", '1', 'q');
   rightPaddle = new Paddle(width - PADDLE_INSET, height/2, "images/drag2.png", '0', 'p');
-
+  
   ball = new Ball(width/2, height/2);
-
+  
   backgroundImage = loadImage("Desktop/PongNoBugs/data/images/BOARD.png");
-
+  
   path = sketchPath("themesong.mp3");
   file = new SoundFile(this, path);
   file.loop();
@@ -96,17 +95,26 @@ void playGame() {
   rightPaddle.display();
   ball.display();
   
-  fill(255,255,255,0);
-  noStroke();
-  rect(0,0,720,1080);
-  fill(255,255,255,0);
-  noStroke();
-  rect(width-720,0,720,1080);
+  fill(player1Shade,0);
+  rect(0,0,width-720,1080);
+  fill(player2Shade,0);
+  rect(720,0,720,1080);
+
   
-  if(scoreL + 1 < winScore) {
-    rect(0,0,720,1080);
+//  fill(255,255,255,0);
+//  noStroke();
+//  rect(0,0,720,1080);
+//  fill(255,255,255,0);
+//  noStroke();
+//  rect(width-720,0,720,1080);
+  
+  if(scoreL =+ 1 || scoreL < winScore) {
+    player1Shade +=10;
     }
-   
+  
+   if(scoreR =+ 1|| scoreR < winScore) {
+    player2Shade +=10;
+    }
   
   if(scoreL == winScore) {
    background(100,100,100);
