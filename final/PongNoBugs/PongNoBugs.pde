@@ -11,6 +11,8 @@ Ball ball;
 
 PImage backgroundImage;
 PImage ruStart;
+PImage velour;
+PImage eureka;
 PFont font;
 
 
@@ -133,11 +135,12 @@ void playGame() {
 }
 
 void winGame() {
-  
-  background(125,10,152);
-   fill(255);
-   text("Sashay Away! \n You just got R-E-A-D Honey!", width/4,height/2);
-   text("Want some more? \n Click anywhere to start again!", width/4-100,height/2 + 150);
+  velour = loadImage("images/velour.png");
+  background(velour);
+//  background(125,10,152);
+//   fill(255);
+//   text("Sashay Away! \n You just got R-E-A-D Honey!", width/4,height/2);
+//   text("Want some more? \n Click anywhere to start again!", width/4-100,height/2 + 150);
    fill(200);
    rect(350,380,100,60);
   if(mousePressed==true && mouseX > 350 && mouseX < 450 && mouseY > 380 && mouseY < 440) {
@@ -146,12 +149,15 @@ void winGame() {
 }
 
 void loseGame() {
-  background(200,100,10);
-   fill(255);
-   text("SLAYYYY!! YAS QUEEN!", width/4,height/2);
-   text("Want some more? Click anywhere to start again!", width/4-100,height/2 + 150);
+  eureka = loadImage("images/eureka.png");
+  background(eureka);
+  
+//  background(200,100,10);
+//   fill(255);
+//   text("SLAYYYY!! YAS QUEEN!", width/4,height/2);
+//   text("Want some more? Click anywhere to start again!", width/4-100,height/2 + 150);
    fill(200);
-   rect(350,380,100,60);
+  rect(350,380,100,60);
    
    if(mousePressed==true && mouseX > 350 && mouseX < 450 && mouseY > 380 && mouseY < 440) {
     resetGame();
