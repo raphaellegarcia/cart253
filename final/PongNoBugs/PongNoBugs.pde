@@ -98,10 +98,10 @@ void playGame() {
   rightPaddle.display();
   ball.display();
   
-  fill(player1Shade);
+  fill(0,0,0,player1Shade);
   rect(0,0,width-720,1080);
   
-  fill(player2Shade);
+  fill(0,0,0,player2Shade);
   rect(720,0,720,1080);
   
   

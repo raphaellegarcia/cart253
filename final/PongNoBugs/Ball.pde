@@ -89,12 +89,12 @@ picArray[i]= loadImage("Desktop/PongNoBugs/data/images/" +i+ ".png");
       }
       if (x > width ) {
         scoreL += 1;
-        player1Shade += 10;
+        player1Shade += 50;
         reset();
     }
     if (x < 0 ) {
         scoreR += 1;
-        player2Shade += 10;
+        player2Shade += 50;
         reset();
     }
   }
