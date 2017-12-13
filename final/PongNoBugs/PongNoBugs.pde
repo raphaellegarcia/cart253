@@ -79,7 +79,7 @@ void draw() {
   }
 }
 
-
+//Gives position, colour and text size of both scores
 void scores() {
   fill (255);
   textSize(30);
@@ -87,71 +87,82 @@ void scores() {
   text(scoreR, width-100, 50); 
 }
 
+//Puts the image of rupaul as initial background image when the game starts
 void startGame() {
    ruStart = loadImage("images/ruStart.png");
   background(ruStart); 
 }
 
+//defines components of the game state play
 void playGame() {
   background(backgroundImage);
   scores();
+  
+//update paddles and ball  
   leftPaddle.update();
   rightPaddle.update();
   ball.update();
 
+//check if there is a collision between ball and paddles
   ball.collide(leftPaddle);
   ball.collide(rightPaddle);
-
+  
+//check if ball is off screen
   leftPaddle.display();
   rightPaddle.display();
   ball.display();
-  
+
+//defines (color and position) the rectangle of shade hovering on player 1  
   fill(0,0,0,player1Shade);
   rect(0,0,width-720,1080);
   
+//defines (color and position) the rectangle of shade hovering on player 2  
   fill(0,0,0,player2Shade);
   rect(720,0,720,1080);
   
-  
+//declares if score from left player wins, the game state changes to WIN  
   if(scoreL == winScore) {
     gameState = "WIN";
  }
- 
+
+//declares if score from right player wins, the game state changes to LOSE 
   if(scoreR == winScore) {
     gameState = "LOSE";
  }
 }
 
+//puts image of Sasha Velour as background if she wins the shade battle as well as puts the button on which to click
+//to restart the game
 void winGame() {
   velour = loadImage("images/velour.png");
   background(velour);
-//  background(125,10,152);
-//   fill(255);
-//   text("Sashay Away! \n You just got R-E-A-D Honey!", width/4,height/2);
-//   text("Want some more? \n Click anywhere to start again!", width/4-100,height/2 + 150);
-   fill(200);
-   rect(350,380,100,60);
-  if(mousePressed==true && mouseX > 350 && mouseX < 450 && mouseY > 380 && mouseY < 440) {
-    resetGame();
+  
+ //button
+  fill(200);
+  rect(350,380,100,60);
+  
+  //condition to restart the game, click in the box with these coordinates
+    if(mousePressed==true && mouseX > 350 && mouseX < 450 && mouseY > 380 && mouseY < 440) {
+      resetGame();
   } 
 }
 
+//puts image of Eureka O'Hara as background if she wins the shade battle as well as puts the button on which to click
+//to restart the game
 void loseGame() {
   eureka = loadImage("images/eureka.png");
   background(eureka);
-  
-//  background(200,100,10);
-//   fill(255);
-//   text("SLAYYYY!! YAS QUEEN!", width/4,height/2);
-//   text("Want some more? Click anywhere to start again!", width/4-100,height/2 + 150);
-   fill(200);
+//button
+  fill(200);
   rect(350,380,100,60);
-   
+  
+//condition to restart the game, click in the box with these coordinates
    if(mousePressed==true && mouseX > 350 && mouseX < 450 && mouseY > 380 && mouseY < 440) {
     resetGame();
   }
 }
 
+//turns the score values and opacity levels of the black rectangles back to 0, and change the game state to START
 void resetGame() {
     gameState = "START";
     scoreL = 0;
@@ -160,6 +171,7 @@ void resetGame() {
     player2Shade = 0;
 }
 
+//clears background
 void clearBackground() {
 }
 
@@ -176,6 +188,7 @@ void keyReleased() {
   rightPaddle.keyReleased();
 }
 
+//When mouse clicks on the start screen, turns the game state to PLAY
 void mouseClicked() {
   gameState = "PLAY";
 } 

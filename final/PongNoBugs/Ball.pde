@@ -14,11 +14,13 @@ class Ball {
   int vx;
   int vy;
 
-  // The image that represents the ball
+  // The images that represents the ball, here, the shady quotes put into an array
+  //Nina Parenteau helped me figure this part out
   PImage image;
   PImage p0,p1,p2,p3,p4,p5,p6,p7,p8,p9;
   PImage [] picArray = new PImage [10];
   
+//this helps later to make sure the quote changes when the ball hits the paddle  
   int quotePointer;
 
 
@@ -39,10 +41,13 @@ class Ball {
     y = _y;
     vx = SPEED;
     vy = SPEED;
-    image = loadImage("Desktop/PongNoBugs/data/images/shadeball.png");
-    
+    image = loadImage("images/shadeball.png");
+
+//for loop that insures that the images in the array list change when the ball hits the paddle
+// +i+ is a trick to change the images (named 1,2,3,4,5...) go one number up, thus change the image file
+//done with the help of Nina Parenteau
 for (int i = 0; i < picArray.length; i++) {
-picArray[i]= loadImage("Desktop/PongNoBugs/data/images/" +i+ ".png");
+picArray[i]= loadImage("images/" +i+ ".png");
 }
   }
 
@@ -67,14 +72,19 @@ picArray[i]= loadImage("Desktop/PongNoBugs/data/images/" +i+ ".png");
      
  
       }
+      //if loop to say if the ball's x position is bigger than the width, left player gains a point, and the 
+      //shade rectangle's opacity gains 50 points of opacity(making it darker)
+      
       if (x > width ) {
         scoreL += 1;
-        player2Shade += 50;
+        player2Shade += 50; //helped by Nina Parenteau
         reset();
     }
+    //if loop to say if the ball's x position is smaller than the width, right player gains a point, and the 
+      //shade rectangle's opacity gains 50 points of opacity(making it darker)
     if (x < 0 ) {
         scoreR += 1;
-        player1Shade += 50;
+        player1Shade += 50; //helped by Nina Parenteau
         reset();
     }
   }
@@ -124,9 +134,10 @@ picArray[i]= loadImage("Desktop/PongNoBugs/data/images/" +i+ ".png");
         // Reset its position to align with the left side of the paddle
         x = paddle.x - paddle.image.width/2 - image.width/2;
       }
-      // And make it bounce
+      //And make it bounce in opposite direction
+      //and updates the pointer to change the quote to the next png file
       vx = -vx;
-      quotePointer++;
+      quotePointer++; 
     }
   }
 
