@@ -55,9 +55,10 @@ void draw() {
     playGame();
   } else if (gameState == "WIN") {
     winGame();
-  } else if (gameState == "LOSE") {
-    loseGame();
-  }
+  } 
+//  else if (gameState == "LOSE") {
+//    loseGame();
+//  }
 }
 
 // void startGame() {
@@ -106,10 +107,11 @@ void playGame() {
   
   
   if(scoreL == winScore) {
-   background(100,100,100);
-   fill(255);
-   text("Sashay Away! You just got R-E-A-D Honey!", width/4,height/2);
-   text("Want some more? Click anywhere to start again!", width/4-100,height/2 + 150);  
+    gameState = "WIN";
+//   background(100,100,100);
+//   fill(255);
+//   text("Sashay Away! You just got R-E-A-D Honey!", width/4,height/2);
+//   text("Want some more? Click anywhere to start again!", width/4-100,height/2 + 150);  
  }
  
   if(scoreR == winScore) {
@@ -122,16 +124,22 @@ void playGame() {
 }
 
 void winGame() {
+  
+  background(125,10,152);
+   fill(255);
+   text("Sashay Away! \n You just got R-E-A-D Honey!", width/4,height/2);
+   text("Want some more? \n Click anywhere to start again!", width/4-100,height/2 + 150);
+   
   if(mousePressed==true) {
     gameState = "START";
   } 
 }
 
-void loseGame() {
-   if(mousePressed==true) {
-    gameState = "START";
-  }
-}
+//void loseGame() {
+//   if(mousePressed==true) {
+//    gameState = "START";
+//  }
+//}
 
 void resetGame() {
      if(mousePressed==true) {
@@ -146,6 +154,7 @@ void keyPressed() {
   // Just call both paddles' own keyPressed methods
   leftPaddle.keyPressed();
   rightPaddle.keyPressed();
+  
 }
 
 void keyReleased() {
