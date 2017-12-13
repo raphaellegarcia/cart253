@@ -1,39 +1,43 @@
-//Artist Statement
+//Artist Statement: RuPong
 // For this proposed game, I decided to create a version of Pong inspired by the TV series RuPaul's Drag
 // Race. My approah toward this game was to implement a part of the drag queen show's culture: readings. 
 // Every read is pretty much a "diss" directed toward another drag queen, commenting on their looks, their intelligence, background etc.
 //
 
+//Variables for the paddles and the ball
 Paddle leftPaddle;
 Paddle rightPaddle;
 Ball ball;
 
-
+// The images to use in the different game states, start, play, win and lose as well as the font
 PImage backgroundImage;
 PImage ruStart;
 PImage velour;
 PImage eureka;
 PFont font;
 
-
+// The distance of the paddle from the edge, the start scores and the win score
 int PADDLE_INSET = 32;
 int scoreL = 0;
 int scoreR = 0;
 int winScore = 6;
 
+// the background colour as well as the colors used for the black rectangles (shade) opacity
+// see later to understand the black rectangles
 color backgroundColor = color(0);
 color player1Shade = color(0,0,0,0);
 color player2Shade = color(0,0,0,0);
 
-
+// String used to define multiple game states
 String gameState;
 
+//The song that plays annoyingly in the background
 import processing.sound.*;
 SoundFile file;
 String audioName = "themesong.mp3";
 String path;
 
-
+// Sets the size of the game window, the size of text, the font
 void setup() {
   size(1440, 1080);  
   textSize(20);
@@ -41,6 +45,7 @@ void setup() {
   font = loadFont("8bit.vlw");
   textFont(font);
 
+//
   gameState = "START";
 
   leftPaddle = new Paddle(PADDLE_INSET, height/2, "images/drag1.png", '1', 'q');
