@@ -1,9 +1,16 @@
+//Artist Statement
+// For this proposed game, I decided to create a version of Pong inspired by the TV series RuPaul's Drag
+// Race. My approah toward this game was to implement a part of the drag queen show's culture: readings. 
+// Every read is pretty much a "diss" directed toward another drag queen, commenting on their looks, their intelligence, background etc.
+//
+
 Paddle leftPaddle;
 Paddle rightPaddle;
 Ball ball;
 
 
 PImage backgroundImage;
+PImage ruStart;
 PFont font;
 
 
@@ -74,14 +81,15 @@ void draw() {
 
 void scores() {
   fill (255);
-  textSize(10);
+  textSize(30);
   text(scoreL, 100, 50);
   text(scoreR, width-100, 50); 
 }
 
 void startGame() {
-//  background(backgroundImage); 
-  text("click anywhere to start", width/2-500, height/2);
+   ruStart = loadImage("images/ruStart.png");
+  background(ruStart); 
+//  text("click anywhere to start", width/2-500, height/2);
 }
 
 void playGame() {
