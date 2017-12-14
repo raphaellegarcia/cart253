@@ -1,8 +1,6 @@
 // Ball
 class Ball {
 
-  /////////////// Properties ///////////////
-
   // Default values for speed and size
   int SPEED = 5;
 

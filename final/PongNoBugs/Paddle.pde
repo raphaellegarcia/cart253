@@ -1,16 +1,12 @@
 // Paddle
-//
-// A class that defines a paddle that can be moved up and down on the screen
-// using keys passed through to the constructor.
+
 
 class Paddle {
-
-  /////////////// Properties ///////////////
 
   // Default values for speed and size
   int SPEED = 5;
 
-  // The position and velocity of the paddle (note that vx isn't really used right now)
+  // The position and velocity of the paddle 
   int x;
   int y;
   int vx;
@@ -19,15 +15,11 @@ class Paddle {
   // The image that represents the paddle
   PImage image;
 
-  // The characters used to make the paddle move up and down, defined in constructor
+  // The characters used to make the paddle move up and down
   char upKey;
   char downKey;
 
 
-  /////////////// Constructor ///////////////
-
-  // Paddle(int _x, int _y, String _image, char _upKey, char _downKey)
-  //
   // Sets the position and controls based on arguments,
   // starts the velocity at 0,
   // loads the specified image
@@ -45,10 +37,6 @@ class Paddle {
   }
 
 
-  /////////////// Methods ///////////////
-
-  // update()
-  //
   // Updates position based on velocity and constraints the paddle to the window
 
   void update() {

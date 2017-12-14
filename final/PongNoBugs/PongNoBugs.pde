@@ -2,7 +2,18 @@
 // For this proposed game, I decided to create a version of Pong inspired by the TV series RuPaul's Drag
 // Race. My approah toward this game was to implement a part of the drag queen show's culture: readings. 
 // Every read is pretty much a "diss" directed toward another drag queen, commenting on their looks, their intelligence, background etc.
-//
+//This adaption of Pong mixed with RuPaul’s Drag Race, is a game that not only gives a wink to the classic game and the epic TV show, but also, in retrospective, gives you a visual 
+//adaption and sense of the act of “throwing shade”. While being part of the drag queen culture, and also being quite funny sometimes, through this game, one may realize how othering 
+//these words can be. From a personal experience, playing the game the few times was quite funny. And then it turned sour, as it made me realize the verbal violence used by people in
+//a community seeking to be free of boxes. This realization came about during a conversation on the matter with classmates of CART. For a game that aimed to be as funny as when we laugh 
+//at all the jokes the queens say, to realizing the impact words deemed entertaining can have on individuals, I believe the aspect of interactivity between machine and real world realization
+//has done its job. 
+//This game starts with only two drag queens selected randomly, Eureka O’Hara and Sasha Velour, throwing shade at each other (quoted from all the drag queens from the show).
+//In terms of design, the techniques that have been used to code the game were with the use of arrays, collisions, if statements, for loops, modulos image loads etc. 
+//All in their simplest and clear forms in order to get the desired results. 
+//When a player hits the ball, a new quote appears, meaner than the previous one. When a drag queen misses the ball, their side of the game becomes a shade darker, as though 
+//they truly have been shaded on. This dark area becomes as pitch as black when they miss too many balls, where the player cannot see its character’s position in space, nor 
+//where the ball is located, forcing them to lose the game.
 
 //Variables for the paddles and the ball
 Paddle leftPaddle;
