@@ -206,7 +206,6 @@ void mouseClicked() {
 
 
 
-//
 //Sources
 //Logo RuPaul: http://demilovato.wikia.com/wiki/RuPaul%27s_Drag_Race
 //Start Page photo: https://www.wmagazine.com/story/rupaul-drag-race-season-9-lady-gaga

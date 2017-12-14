@@ -73,8 +73,6 @@ class Paddle {
     }
   }
 
-  // keyReleased()
-  //
   // Called when keyReleased is called in the main program
 
   void keyReleased() {
