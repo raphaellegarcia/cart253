@@ -207,8 +207,8 @@ void mouseClicked() {
 
 
 //Sources
-//Logo RuPaul: http://demilovato.wikia.com/wiki/RuPaul%27s_Drag_Race
-//Start Page photo: https://www.wmagazine.com/story/rupaul-drag-race-season-9-lady-gaga
-//Sasha Velour image: http://www.cosmopolitan.com/entertainment/tv/a10222844/sasha-velour-drag-race-interview/
-//Eureke O'Hara image: https://www.advocate.com/television/2017/4/22/last-words-drag-races-eureka-ohara
-//RUPaul Theme Song: https://www.youtube.com/watch?v=B4vsWgECZ6s
+//Logo RuPaul: "Queens of RuPaul’s Drag Race invade Montreal". See. Montreal Rampage. Nicole Yeba. 26 February. 2015. http://montrealrampage.com/queens-of-rupauls-drag-race-invade-montreal/
+//Start Page photo: "RuPaul Has So Many Creative Names to Call Donald Trump". W Magazine. March 19th 2017. https://www.wmagazine.com/story/rupaul-drag-race-season-9-lady-gaga
+//Sasha Velour image: "Drag Race Champion Sasha Velour on the Moment She Thought She Might Go Home" Cosmopolitan. June 26 2017. http://www.cosmopolitan.com/entertainment/tv/a10222844/sasha-velour-drag-race-interview/
+//Eureke O'Hara image: "Last Words With Drag Race's Eureka O'Hara",The Advocate. April 22nd 2017. https://www.advocate.com/television/2017/4/22/last-words-drag-races-eureka-ohara
+//RUPaul Theme Song: "RuPaul's Drag Race Theme Song". Youtube. Uploaded by Antonio Lopez, March 4th 2011. https://www.youtube.com/watch?v=B4vsWgECZ6s
