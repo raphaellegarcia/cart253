@@ -66,7 +66,8 @@ void setup() {
 // creates the ball and its initial position  
   ball = new Ball(width/2, height/2);
 
-//loads the background image  
+//loads the background image 
+//Logo taken from the TV Show
   backgroundImage = loadImage("images/BOARD.png");
 
 //loads the background song  
@@ -84,8 +85,7 @@ void draw() {
     playGame();
   } else if (gameState == "WIN") {
     winGame();
-  } 
-  else if (gameState == "LOSE") {
+  } else if (gameState == "LOSE") {
     loseGame();
   }
 }
@@ -149,7 +149,7 @@ void winGame() {
   background(velour);
   
  //button
-  fill(200);
+  fill(255,181,255);
   rect(350,380,100,60);
   
   //condition to restart the game, click in the box with these coordinates
@@ -164,7 +164,7 @@ void loseGame() {
   eureka = loadImage("images/eureka.png");
   background(eureka);
 //button
-  fill(200);
+  fill(255,181,255);
   rect(350,380,100,60);
   
 //condition to restart the game, click in the box with these coordinates
@@ -203,3 +203,13 @@ void keyReleased() {
 void mouseClicked() {
   gameState = "PLAY";
 } 
+
+
+
+//
+//Sources
+//Logo RuPaul: http://demilovato.wikia.com/wiki/RuPaul%27s_Drag_Race
+//Start Page photo: https://www.wmagazine.com/story/rupaul-drag-race-season-9-lady-gaga
+//Sasha Velour image: http://www.cosmopolitan.com/entertainment/tv/a10222844/sasha-velour-drag-race-interview/
+//Eureke O'Hara image: https://www.advocate.com/television/2017/4/22/last-words-drag-races-eureka-ohara
+//RUPaul Theme Song: https://www.youtube.com/watch?v=B4vsWgECZ6s
